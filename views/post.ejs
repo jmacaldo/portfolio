@@ -1,0 +1,28 @@
+<head>
+  <title>New Blog Post</title>
+<% include header.ejs %>
+</head>
+<% include nav.ejs %>
+<div class="container manager wrapper">
+  <h4>Create a blog post</h4>
+  <div class="well">
+    <form action="/add" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" >
+     </div>
+     <div class="form-group">
+       <label>Image URL</label>
+       <p><small>Optional. Paste the URL of an externally hosted image. Image will appear between the headline and message body. For best results, image must not be wider than 660 pixels.</small></p>
+       <input type="text" class="form-control" name="image" >
+    </div>
+      <div class="form-group">
+         <label>Blog entry goes below</label>
+         <textarea class="form-control" name="message" rows="10"></textarea>
+      </div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</div>
+<% include footer.ejs %>
