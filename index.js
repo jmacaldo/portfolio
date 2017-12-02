@@ -6,6 +6,7 @@ var path = ('path');
 var pg = require('pg');
 var parseConnectionString = require('pg-connection-string');
 var cool = require('cool-ascii-faces');
+const PORT = process.env.PORT || 5000
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
@@ -96,6 +97,6 @@ app.get('*', function(req, res) {
 });
 
 //have the application listen on a specific port
-app.listen(process.env.PORT || 3000, function () {
-    console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+    console.log("App is running on port " + port);
 });
