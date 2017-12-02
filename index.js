@@ -5,6 +5,7 @@ var parser = require('body-parser');
 var path = ('path');
 var pg = require('pg');
 var parseConnectionString = require('pg-connection-string');
+var cool = require('cool-ascii-faces');
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
@@ -25,6 +26,11 @@ app.get('/', function(req, res) {
       });
   });
 }); // router close
+
+//cool heroku test route
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
 
 //blog
 app.get('/blog', function(req, res) {
