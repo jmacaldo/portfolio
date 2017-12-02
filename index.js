@@ -6,7 +6,7 @@ var path = ('path');
 var pg = require('pg');
 var parseConnectionString = require('pg-connection-string');
 var cool = require('cool-ascii-faces');
-const PORT = process.env.PORT || 5000
+var port = process.env.PORT || 5000;
 
 app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }));
