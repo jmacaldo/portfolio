@@ -87,7 +87,8 @@ app.delete('/delete/:id', function(req, res) {
 
 //if no routes are matched, return a 404
 app.get('*', function(req, res) {
-    res.status(404).send('<h1>uh oh! page not found!</h1>');
+    res.status(404).send('<h1>test err!</h1>');
+    res.render('err404', {});
 });
 
 //have the application listen on a specific port

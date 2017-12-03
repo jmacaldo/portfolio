@@ -6,7 +6,12 @@ html, body {
     height: 100%;
 }
 
-
+.err404 {
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+  color: white
+}
 .submitBtn {
   background-color: #808080;
   border: #808080;
@@ -28,11 +33,20 @@ html, body {
   margin-bottom: 20px;
   z-index: 2;
 }
+.open .dropdown-toggle {
+  color: #fff ;
+  background-color: #555 !important;
+}
+
+.dropdown-menu li a {
+  color: #000 !important;
+    }
 
 .dropdown-menu{
   background-color: #000;
   opacity: .8;
 }
+
 
 .manager {
   max-width: 600px;
