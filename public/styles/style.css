@@ -39,14 +39,37 @@ html, body {
 }
 
 .dropdown-menu li a {
-  color: #000 !important;
+  color: #fff !important;
     }
 
 .dropdown-menu{
-  background-color: #000;
-  opacity: .8;
+  background-color: #0c3c60;
+  opacity: 1 !important;
 }
 
+.portfolio {
+  max-width: 100%;
+
+}
+
+.portfolio body{
+  background-color: #fff;
+
+}
+
+.webdevphoto  {
+  max-width: 100%;
+}
+
+
+.dropdown-menu li a {
+  color: #fff !important;
+    }
+
+.dropdown-menu li a:hover {
+  background-color: #000 !important;
+  opacity: .8;
+    }
 
 .manager {
   max-width: 600px;

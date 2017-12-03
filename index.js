@@ -18,9 +18,9 @@ const pool = new pg.Pool(typeof configuration === 'string' ? parseConnectionStri
 app.set('view engine', 'ejs');
 
 
-//main view
-app.get('/', (req, res) => res.render('pages/index'))
- // router close
+// //main view
+// app.get('/', (req, res) => res.render('pages/index'))
+//  // router close
 
 //cool heroku test route
 app.get('/cool', function(request, response) {
@@ -28,7 +28,7 @@ app.get('/cool', function(request, response) {
 });
 
 //blog
-app.get('/blog', function(req, res) {
+app.get('/', function(req, res) {
   pool.connect(function(err, client, done) {
     client.query('select * from blog order by tstamp desc', function(err, result) {
     res.render('blog', {result: result.rows});
@@ -69,6 +69,11 @@ app.delete('/delete', function(req, res) {
 //post page
  app.get('/post', function(req,res){
    res.render('post', {});
+}); //router close
+
+//post page
+ app.get('/portfolio', function(req,res){
+   res.render('portfolio', {});
 }); //router close
 
 
